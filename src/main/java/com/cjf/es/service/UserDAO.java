@@ -1,6 +1,6 @@
-package com.raiyi.es.service;
+package com.cjf.es.service;
 
-import com.raiyi.es.entity.User;
+import com.cjf.es.entity.User;
 
 import java.util.List;
 

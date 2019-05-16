@@ -1,7 +1,7 @@
-package com.raiyi.es.service.impl;
+package com.cjf.es.service.impl;
 
-import com.raiyi.es.entity.User;
-import com.raiyi.es.service.UserDAO;
+import com.cjf.es.entity.User;
+import com.cjf.es.service.UserDAO;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

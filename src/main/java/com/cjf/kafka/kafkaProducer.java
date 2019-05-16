@@ -1,4 +1,4 @@
-package com.raiyi.kafka;
+package com.cjf.kafka;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;

@@ -1,7 +1,7 @@
-package com.raiyi.es.controller;
+package com.cjf.es.controller;
 
-import com.raiyi.es.entity.User;
-import com.raiyi.es.service.UserDAO;
+import com.cjf.es.entity.User;
+import com.cjf.es.service.UserDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

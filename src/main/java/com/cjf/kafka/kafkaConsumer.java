@@ -1,4 +1,4 @@
-package com.raiyi.kafka;
+package com.cjf.kafka;
 
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;

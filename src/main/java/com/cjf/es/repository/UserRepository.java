@@ -1,6 +1,6 @@
-package com.raiyi.es.repository;
+package com.cjf.es.repository;
 
-import com.raiyi.es.entity.User;
+import com.cjf.es.entity.User;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
