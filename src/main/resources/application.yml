@@ -1,0 +1,37 @@
+#application.properties
+# Local Elasticsearch config
+spring:
+  application:
+    name: es-kafka
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: localhost:9300
+      repositories:
+        enabled: true
+  kafka:
+    bootstrap-servers: 192.168.25.128:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer # 指定消息key和消息体的编解码方式
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: 1
+      retries: 0
+      batch-size: 16384 #每当多个记录被发送到同一分区时，生产者将尝试将记录一起批量处理为更少的请求，此配置控制默认批量大小（以字节为单位），默认值为16384
+      buffer-memory: 33554432 #生产者可用于缓冲等待发送到服务器的记录的内存总字节数，默认值为33554432
+    consumer:
+      group-id: test-group
+      enable-auto-commit: true #如果'enable.auto.commit'为true，则消费者偏移自动提交给Kafka的频率（以毫秒为单位），默认值为5000
+      auto-commit-interval: 1000
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+server:
+  port: 8888
+
+elasticsearch:
+  index:
+    name: my_index
+  user:
+    type: user
+#logging:
+#  level:
+#    root: debug

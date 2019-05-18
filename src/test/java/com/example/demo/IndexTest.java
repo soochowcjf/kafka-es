@@ -23,4 +23,13 @@ public class IndexTest {
         // 配置映射，会根据Item类中的id、Field等字段来自动完成映射
         elasticsearchTemplate.putMapping(Item.class);
     }
+
+//    @Test
+//    public void testUpdate() {
+//        IndexQuery indexQuery = new IndexQuery();
+//        Item item = new Item();
+//        indexQuery
+//
+//    }
+
 }
