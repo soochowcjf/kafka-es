@@ -12,7 +12,7 @@ import java.util.Map;
  * @create 14:42 2019/5/16
  * @desc
  **/
-@Document(indexName = "my_index", type = "user")
+@Document(indexName = "user_index", type = "user", shards = 5, replicas = 0)
 public class User {
 
     @Id

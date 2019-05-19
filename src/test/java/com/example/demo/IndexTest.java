@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.DemoApplication;
+import com.KafkaESApplication;
 import com.cjf.es.entity.Item;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +10,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
+@SpringBootTest(classes = KafkaESApplication.class)
 public class IndexTest {
 
     @Autowired

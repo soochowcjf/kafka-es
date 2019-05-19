@@ -6,12 +6,12 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldIndex;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-@Document(indexName = "item", type = "docs", shards = 5, replicas = 1)
+@Document(indexName = "item", type = "docs", shards = 5, replicas = 0)
 public class Item {
     @Id
-    private Long id;
+    private String id;
 
-    @Field(type = FieldType.String, analyzer = "ik_max_word")
+    @Field(type = FieldType.String)
     private String title; //标题
 
     @Field(type = FieldType.String)
@@ -26,11 +26,11 @@ public class Item {
     @Field(index = FieldIndex.not_analyzed, type = FieldType.String)
     private String images; // 图片地址
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -72,5 +72,17 @@ public class Item {
 
     public void setImages(String images) {
         this.images = images;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", brand='" + brand + '\'' +
+                ", price=" + price +
+                ", images='" + images + '\'' +
+                '}';
     }
 }
